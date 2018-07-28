@@ -249,11 +249,12 @@ form {
 	}
 	
 	input, textarea {
-		height: 20px;
+		height: 40px;
 		border: thin dotted #F66C39;
 		border-radius: 70px;
 		font-family: 'Forum', cursive;
 		font-size: 16px;
+		padding: 5px;
 	}
 
 	textarea {
