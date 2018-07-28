@@ -1,100 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" lang="rus">
-	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&amp;subset=cyrillic" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Forum" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="plan.css"/>
-	<link type="text/css" href="plan-middle-mobile.css" rel="stylesheet" media="screen and (max-width: 1000px)">
-	<link type="text/css" href="plan-mobile.css" rel="stylesheet" media="screen and (max-width: 600px)">
-    <link type="text/css" href="plan-5x.css" rel="stylesheet" media="screen and (max-device-width: 600px)">
-    <script src="plan.js"></script>
-	<title>Опрос</title>
-</head>
-
-<body>
-    <div class="alls">
-    <header>
-                <div id="logos"><a href="plan.html"><img src="images/logo6.png"></a></div>
-                <div id="logotext"><p>Мы должны с этим разобраться</p>
-                </div>
-    </header>
-
-    <div>
-        <h1><a href="/">Django Girls Blog</a></h1>
+{% extends 'blog/base.html' %}
+{% block content %}
         {% for post in posts %}
         <div>
             <p>published: {{ post.published_date }}</p>
-            <h1><a href="">{{ post.title }}</a></h1>
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
-    </div>
-
-    <div class="tableContainer">
-        <div class="tableRow">
-        </div>
-            <div class="numbers">
-                <div id="name">
-                    <form action="" method="POST">
-                        <fieldset>
-                            <legend><h3>Привет. Представся пожалуйста ^^</h3></legend>
-                            <label for="firstname">Имя: </label><input type="text" id="firstname" name="firstname" value="" placeholder="Имя" maxlength="10" required/><br>
-                            <label for="lastname">Фамилия: </label><input type="text" id="lastname" name="lastname" value="" placeholder="фамилия" maxlength="16" required/><br>
-                            <label for="birthday">Дата рождения: </label><input type="date" id="birthday" name="birthday" value="1990-01-01" min="1920-01-01" required>
-                        </fieldset>
-                        <fieldset>
-                                <legend><h3>Придумай логин и пароль</h3></legend>
-                                <label for="login">Логин: </label><input type="text" id="login" name="login" value="" placeholder="lizzy1" maxlength="10" required/><br>
-                                <label for="password">Пароль: </label><input type="password" name="password" value="" placeholder="******" maxlength="16"required/><br>
-                                <label for="photo">Фотка: </label><input type="file" id="photo" name="photo">
-                            </fieldset>
-                        
-                         <fieldset>
-                        <legend><h3><label for="countage">Сколько лет вы ходите на работу?</label></h3></legend>
-                        <input type="number" name="countage" min="1" max="10" id="countage">
-                        <label for="worker">определяет кто вы:</label><output type="text" id="worker" value="">
-                        </fieldset>
-                        <input type="button" value="узнать" onclick="copypast()"/>
-
-                        <p>
-                               <h3>А что по специальности?</h3>
-                                <input type="checkbox" name="extras[]" value="разработчик" width="20px"><label for="extras[]"></label>Разработчик<br>
-                                <input type="checkbox" name="extras[]" value="тестировщик" checked="checked">Тестировщик<br>
-                                <input type="submit" id="lovi" value="Лови">
-                        </p>
-                    </form>
-                </div>
-            </div>
-            <aside class="prav">
-                <div id="coffee">
-                    <form action="" method="POST">
-                        <h3>Любишь американо на Эфиопии перед трудной работой?</h3>
-                            <p>
-                                <input type="radio" name="love" value="сильно"/>сильно<br>
-                                <input type="radio" name="love" value="очень сильно"/>очень сильно<br>
-                                <input type="radio" name="love" value="только js" checked/>люблю только js<br>
-                            </p>
-                        <h3>О чём любишь рассказывать посторонним?</h3>
-                             <select name="characters" multiple="multiple">
-                                    <option value="1">О работе</option>
-                                    <option value="2">О профориентации</option>
-                                    <option value="3">О своих успехах</option>
-                                    <option value="4">Сплетни</option>
-                                     <option value="5">Не люблю разговаривать</option>
-                                </select>
-                                <p>Расскажи тогда мне, если хочешь</p>
-                            <textarea name="comments" rows="10" cols="48"></textarea>
-                            <p>Дата: <input type="date"/><br>
-                                Подпись: <input type="radio" name="sign" value="ok"/>Согласен.<br>
-                                <input type="submit" value="Meow"/>
-                            </p>
-                    </form>
-                </div>
-            </aside>
-
-    </div>
-</div>
-
-    </div>
-</body>
+    {% endblock %}
+ 

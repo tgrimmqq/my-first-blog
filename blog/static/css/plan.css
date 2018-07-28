@@ -1,0 +1,285 @@
+@font-face {
+				font-family: Dewberry;
+				src: url("images/Dewberry italic.ttf");
+			}
+
+body {
+	margin: 0;
+	font-size: 20px;
+	font-family: 'Forum', cursive;
+	color: #D45627;
+	background-color: #fff;
+}
+
+div.alls {
+	margin: 0;
+	/*width: 1100px;*/
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header {
+	/*display: table-header-group;*/
+	margin: 0;
+	/*width: 1100px;*/
+	margin-left: auto;
+	margin-right: auto;
+	position: fixed;
+	table-layout: fixed;
+	background: #FFD105;
+	font-family: 'Amatic SC', cursive;
+	border-bottom-left-radius: 90em;
+	border-bottom-right-radius: 90em;
+	z-index: 99;
+}
+
+		div#logos {
+			display: table-cell;
+			margin: 0;
+			height: 40px;
+			width: 600px;
+			padding-left: 4%;
+			vertical-align: top;
+			border-bottom-left-radius: 90em;
+			box-shadow: 0 5px 0px #fcd41c;
+		}
+
+		#logos img {
+			padding-top: 1em;
+			padding-left: 1em;
+			padding-bottom: 0;
+			width: 118px;
+		}
+
+		div#logotext {
+			display: table-cell;
+			height: 40px;
+			width: 600px;
+			text-align: right;
+			margin: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			font-size: 100%;
+			font-weight: bolder;
+			padding-right: 10%;
+			vertical-align: top;
+			border-bottom-right-radius: 90em;
+			box-shadow: 0 5px 0px #fcd41c;
+		}
+div.tableContainer {
+	margin: 0;
+	padding-top: 100px;
+	display: table;
+	border-spacing: 30px;
+	clear: both;
+}
+
+div.tableRow {
+	margin-top: 0;
+	display: table-row;
+}
+
+div.numbers {
+	display: table-cell;
+	width: 60%;
+	/*margin: 0 50% 10px 5%;*/
+	vertical-align: top;
+	padding-right: 100px;
+	padding-left: 50px;
+	}
+
+aside.prav {
+	display: table-cell;
+	width: 30%;
+	padding-right: 10%;
+	/*margin: 5% 10% 10% 10%;*/
+	text-align: center;
+	/*float: right;*/
+	font-family: 'Forum', cursive;
+	vertical-align: top;
+}
+
+#but {
+	border: 3px #b0a7ab dotted;
+	background: #fff;
+	box-shadow: 0 10em 8em #b0a7ab;
+	border-radius: 70em;
+	width: 16em;
+	margin-bottom: 2em;
+}
+
+a:link {color: #b0a7ab;
+	text-decoration-line: none;}
+a:visited {color:#FFD105;
+	text-decoration-line: none;}
+a:hover {color:#FFD105;
+	text-decoration-line: none;
+}
+#but:hover {
+	box-shadow: 0 2px 5px #b0a7ab;
+}
+#but:focus-visible {
+	box-shadow: 0 0 0 #FFFCFC;
+}
+#but:active {
+	box-shadow: 0 0 0 #FFFCFC;
+}
+
+img {
+	width: 16em;
+}
+
+
+h1 {
+	font-size: 3.5em;
+	border-bottom: 0.5px dotted #b0a7ab;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+div h2, h1 {
+	font-family: 'Amatic SC', cursive;
+	font-weight: bolder;
+	color: #D45627;	
+	margin-left: 5%;
+}
+
+span {
+	color: green;
+	font-weight: lighter;
+}
+
+.do {
+	font-style: italic;
+}
+
+.what {
+	color: grey;
+	font-weight: bolder;
+}
+
+.pills {
+	margin-left: 5%;
+	list-style: none;
+	counter-reset: li;
+	font-family: 'Forum', cursive;
+	font-weight: bolder;
+	line-height: 1em;
+	letter-spacing: 0.1em;
+}
+.pills li {
+	padding: 10px 0;
+	position: relative;
+	left: 1.5em;
+	margin-bottom: 0.1em;
+	padding-left: 1em;
+	background: #FFD105;
+	border-bottom-right-radius: 70em;
+	border-top-right-radius: 70em;
+}
+.pills li:before {
+	padding: 10px 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -1.5em;
+	width: 1.875em;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	font-weight: bold;
+	background: #F66C39;
+	border-bottom-left-radius: 70em;
+	border-top-left-radius: 70em;
+	counter-increment: li;
+	content: counter(li);
+}
+div#coupon {
+	position: relative;
+	top: 350px;
+	left:-90px;
+}
+
+table {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+	width: 800px;
+	caption-side: bottom;
+	border-collapse: collapse;
+}
+tr {
+	font-weight: bold;
+}
+
+table tr,th,td {
+	height: 15px;
+	border: 1px #fcd41c solid;
+}
+tr:nth-child(even){
+	background-color: #fff5c8;
+}
+table#inp {
+	width: 30px;
+}
+input#flag {
+	font-size: 10px;
+}
+#coffee p {
+	font-size: 18px;
+	color: #b0a7a4;
+}
+div#name {
+	margin-top: 0;
+	line-height: 35px;
+}
+
+form {
+	display: table;
+	width: 500px;
+	padding: 10px;
+	border: 4px dotted #FFD105;
+	 background-color: #FFFFFF;
+	 border-radius: 100px;
+	 padding-left: 50px;
+	}
+	
+	input, textarea {
+		height: 20px;
+		border: thin dotted #F66C39;
+		border-radius: 70px;
+		font-family: 'Forum', cursive;
+		font-size: 16px;
+	}
+
+	textarea {
+		height: 50px;
+	}
+	input#lovi:hover {
+			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);			
+	}
+
+input[type="checkbox"] {
+	border-radius: 10px;
+	border: thin dotted #F66C39;
+	background-color: #fff5c8;
+}
+
+output {
+	color: green;
+}
+
+fieldset {
+	border: 3px dotted #FFD105;
+}
+
+form h3 {
+	font-family: 'Forum', cursive;
+}
